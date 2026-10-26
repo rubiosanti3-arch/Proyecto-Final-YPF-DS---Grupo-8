@@ -25,3 +25,11 @@ Consiste en un conjunto de datos sintéticos de alta fidelidad que modela los pa
     *   Filtro y separación dinámica de variables numéricas (físicas) y variables binarias (targets).
     *   Análisis estadístico descriptivo (asimetría y curtosis).
     *   Visualizaciones univariadas y bivariadas (histogramas, boxplots/violines de densidad) condicionadas por el target para evaluar el poder predictivo de cada característica.
+
+### Segunda preentrega (26/10)
+*   `data_pipeline.ipynb`: Preparación del dataset para modelado y comparación de modelos de clasificación. Se incorporaron:
+    *   Limpieza y normalización de los nombres de las columnas.
+    *   Codificación de la variable categórica y estandarización de las variables numéricas.
+    *   División estratificada de los datos y tratamiento del desbalance mediante SMOTE.
+    *   Entrenamiento y optimización de modelos de regresión logística y XGBoost mediante búsqueda aleatoria de hiperparámetros.
+    *   Evaluación con precision, recall, F1-score, ROC-AUC y Average Precision. XGBoost obtuvo el mejor desempeño general.
