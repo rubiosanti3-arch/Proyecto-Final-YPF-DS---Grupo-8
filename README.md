@@ -2,7 +2,17 @@
 
 Repositorio para el proyecto final del curso de Data Science + IA de Fundación YPF.
 
-**Integrantes del Grupo 9:**
+## Requisitos para ejecutar los notebooks
+- Python 3 y Jupyter Notebook o JupyterLab.
+- Instalar las dependencias de análisis y modelado:
+
+```bash
+python -m pip install jupyter numpy pandas matplotlib seaborn scipy scikit-learn imbalanced-learn xgboost shap
+```
+
+- Ejecutar los notebooks desde la raíz del repositorio. `eda_pipeline.ipynb` utiliza `Material/Datasets/ai4i2020.csv` y genera `Material/Datasets/ai4i2020_model_ready.csv`, que luego utiliza `ml_pipeline.ipynb`.
+
+**Integrantes del Grupo 8:**
 - Lucas Becerra
 - Santiago Rubio
 - Nicolás Saavedra
@@ -33,3 +43,11 @@ Consiste en un conjunto de datos sintéticos de alta fidelidad que modela los pa
     *   División estratificada de los datos y tratamiento del desbalance mediante SMOTE.
     *   Entrenamiento y optimización de modelos de regresión logística y XGBoost mediante búsqueda aleatoria de hiperparámetros.
     *   Evaluación con precision, recall, F1-score, ROC-AUC y Average Precision. XGBoost obtuvo el mejor desempeño general.
+
+### Desarrollo final
+En `eda_pipeline.ipynb` se exploran el desbalance y los tipos de falla, las distribuciones y relaciones entre variables, y se generan características derivadas como la diferencia térmica y la potencia mecánica.
+
+En `ml_pipeline.ipynb` se comparan modelos de regresión logística, Random Forest y XGBoost, incluyendo estrategias para tratar el desbalance, ajuste de hiperparámetros y validación cruzada anidada. También se analizan curvas Precision-Recall, umbrales de clasificación, escenarios simulados de costos, ablación de características y desempeño final en el conjunto de prueba.
+
+El análisis no supervisado aplica K-Means para identificar y caracterizar grupos operativos, seleccionar la cantidad de clusters y estudiar sus tasas de falla. La interpretabilidad se aborda con Permutation Importance y SHAP, tanto a nivel global como para predicciones individuales.
+
